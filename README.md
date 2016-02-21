@@ -4,6 +4,72 @@ Example project using the [parse-server](https://github.com/ParsePlatform/parse-
 
 Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide
 
+### Prepare for multiple local repositories for multiple Parse-server-example instances
+
+* Clone the original Parse-server-example project using the [parse-server](https://github.com/ParsePlatform/parse-server) to a local directory where you want to store the potential repositories, e.g. "C:\Work\tmp\"
+
+  git clone https://github.com/ParsePlatform/parse-server-example parse-server-example-app1
+  
+  Cloning into 'parse-server-example-app1'...
+  
+  remote: Counting objects: 135, done.
+  
+  remote: Compressing objects: 100% (19/19), done.
+  
+  remote: Total 135 (delta 10), reused 0 (delta 0), pack-reused 116
+  
+  Receiving objects: 100% (135/135), 29.00 KiB | 0 bytes/s, done.
+  
+  Resolving deltas: 100% (61/61), done.
+  
+  Checking connectivity... done.
+  
+* Change the current working directory to your local project, e.g. "C:\Work\tmp\parse-server-example-app1\".
+
+* Go back to GitHub under your own account
+
+* Create a new repository and name it "parse-server-example-app1" on GitHub; this repository will host the code for the cloned repository locally as above steps
+
+  URL to the new repository on GitHubhttps://github.com/grassland-curing-cfa/parse-server-example-app1.git
+
+* Now let's push the cloned local repository to the GitHub repository by running the following commands. Reference document: http://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository
+
+* git remote -v
+
+  This shows the current URLs for both "fetch" and "push" for the current "origin"; they should now still be connected to "https://github.com/ParsePlatform/parse-server-example"
+  
+* git remote rm origin
+
+  This should disconnect from the old repository "https://github.com/ParsePlatform/parse-server-example"
+  
+* git remote add origin https://github.com/grassland-curing-cfa/parse-server-example-app1.git
+
+  This should connect to the new repository that was newly created as above.
+  
+* git push -u origin master
+
+  This should push the cloned repository locally to the new remote repository on GitHub. Enter Username and Password for your GitHub account.
+  
+  Counting objects: 133, done.
+
+  Delta compression using up to 4 threads.
+
+  Compressing objects: 100% (69/69), done.
+
+  Writing objects: 100% (133/133), 28.72 KiB | 0 bytes/s, done.
+
+  Total 133 (delta 61), reused 133 (delta 61)
+
+  To https://github.com/grassland-curing-cfa/parse-server-example-app1.git
+
+  * [new branch]      master -> master
+
+  Branch master set up to track remote branch master from origin.
+
+
+
+
+
 ### For Local Development
 
 * Make sure you have at least Node 4.1. `node --version`
