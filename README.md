@@ -129,6 +129,15 @@ Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-se
       
   Add "app.use(cors());" after "var app = express();".
 
+* Push the changes to the remote repository
+
+  Ensure current working directory to your local project, e.g. "C:\Work\tmp\parse-server-example-app1\".
+  
+  git add .
+  
+  git commit -am "updated package.json and index.js files as initial checkin"
+  
+  git push origin master
 
 
 
