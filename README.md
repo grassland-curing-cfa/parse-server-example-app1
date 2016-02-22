@@ -66,6 +66,68 @@ Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-se
 
   Branch master set up to track remote branch master from origin.
 
+* Update package.json
+
+  {
+  
+    "name": "parse-server-example-app1",
+    
+    "version": "1.1.0",
+    
+    "description": "An example Parse API server using the parse-server module",
+    
+    "main": "index.js",
+    
+    "repository": {
+    
+      "type": "git",
+      
+      "url": "https://github.com/grassland-curing-cfa/parse-server-example-app1"
+      
+    },
+  
+    "license": "MIT",
+  
+    "dependencies": {
+  
+      "express": "~4.2.x",
+    
+      "kerberos": "~0.0.x",
+    
+      "parse": "~1.6.12",
+    
+      "parse-server": "~2.1",
+    
+      "underscore": "~1.8.3",
+    
+      "cors": "*"
+    
+    },
+  
+    "scripts": {
+  
+      "start": "node index.js"
+    
+    },
+  
+    "engines": {
+  
+      "node": ">=4.3"
+    
+    }
+  
+  }
+
+* Update index.js
+
+  Add "var cors = require('cors');"
+      after "var express = require('express');"
+  
+  Add "restAPIKey: process.env.REST_API_KEY || '',
+      javascriptKey: process.env.JAVASCRIPT_KEY || '',"
+      to ParseServer constructor
+      
+  Add "app.use(cors());" after "var app = express();".
 
 
 
