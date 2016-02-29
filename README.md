@@ -101,7 +101,7 @@ Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-se
 * Go to Settings and specify the following Config Variables:
   APP_ID, APP_NAME, JAVASCRIPT_KEY, MASTER_KEY, MONGOLAB_URI, PARSE_MOUNT, REST_API_KEY, SERVER_URL, SUPER_USER, SUPER_USER_PASS
 * Go to Deploy and click "GitHub" as the Deployment method
-* Connect to the remote GitHub repository that was set up in the previous setps: "https://github.com/grassland-curing-cfa/parse-server-example-app1.git"
+* Connect to the remote GitHub repository that was set up in the previous setps: "https://github.com/grassland-curing-cfa/NempParseServer{state}"
 * Click Connect and select the Master branch for deployment
 * Enable Automatic Deployment
 * Click Deploy Branch
