@@ -4,7 +4,7 @@ Example project using the [parse-server](https://github.com/ParsePlatform/parse-
 
 Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide
 
-### Prepare for multiple local repositories for multiple Parse-server-example instances
+### Prepare for multiple local and GitHub repositories for multiple Parse-server-example instances
 
 * Clone the original Parse-server-example project using the [parse-server](https://github.com/ParsePlatform/parse-server) to a local directory where you want to store the potential repositories, e.g. "C:\Work\tmp\"
 
@@ -94,7 +94,22 @@ Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-se
   
   git push origin master
 
+### Deploy a Parse-server-example on Heroku
 
+* Log in Heroku Web Admin, go to "Personal apps"
+* Add a new app with new name "nemp-{state}-test"
+* Go to Settings and specify the following Config Variables:
+  APP_ID, APP_NAME, JAVASCRIPT_KEY, MASTER_KEY, MONGOLAB_URI, PARSE_MOUNT, REST_API_KEY, SERVER_URL, SUPER_USER, SUPER_USER_PASS
+* Go to Deploy and click "GitHub" as the Deployment method
+* Connect to the remote GitHub repository that was set up in the previous setps: "https://github.com/grassland-curing-cfa/parse-server-example-app1.git"
+* Click Connect and select the Master branch for deployment
+* Enable Automatic Deployment
+* Click Deploy Branch
+* Test the app
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
 
 ### For Local Development
 
