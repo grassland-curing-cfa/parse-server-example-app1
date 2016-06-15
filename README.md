@@ -99,7 +99,7 @@ Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-se
 * Log in Heroku Web Admin, go to "Personal apps"
 * Add a new app with new name "nemp-{state}-test"
 * Go to Settings and specify the following Config Variables:
-  APP_ID, APP_NAME, JAVASCRIPT_KEY, MASTER_KEY, MONGOLAB_URI, PARSE_MOUNT, REST_API_KEY, SERVER_URL, SUPER_USER, SUPER_USER_PASS
+  APP_ID, APP_NAME, JAVASCRIPT_KEY, MASTER_KEY, MONGODB_URI(or MONGOLAB_URI), PARSE_MOUNT, REST_API_KEY, SERVER_URL, SUPER_USER, SUPER_USER_PASS
 * Go to Deploy and click "GitHub" as the Deployment method
 * Connect to the remote GitHub repository that was set up in the previous setps: "https://github.com/grassland-curing-cfa/NempParseServer{state}"
 * Click Connect and select the Master branch for deployment
